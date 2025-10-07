@@ -8,6 +8,7 @@ public class NextPermutation {
         }
     }
 
+    // next permutation function
     public static void nextPermutation(int[] arr) {
         int i = arr.length - 2;
         while (i >= 0 && arr[i] >= arr[i + 1]) {
@@ -23,12 +24,14 @@ public class NextPermutation {
         reverse(arr, i + 1);
     }
 
+    // swap function
     private static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
+    // reverse function
     private static void reverse(int[] arr, int start) {
         int end = arr.length - 1;
         while (start < end) {
